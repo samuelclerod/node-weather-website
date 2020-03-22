@@ -1,7 +1,7 @@
 const request = require('request')
 
-const message = ({ temperature, precipProbability: rainProbability }) => { 
-    `It is currently ${temperature}C and fells like ${apparentTemperature}C. There is a ${rainProbability}% chance of rain.`
+const message = ({ temperature, precipProbability: rainProbability, apparentTemperature: feelTemperature }) => {
+    return `It is currently ${temperature}C and feels like ${feelTemperature}C. There is a ${rainProbability}% chance of rain.`
 }
 
 const forecast = (latitude, longitude, callback) => {
