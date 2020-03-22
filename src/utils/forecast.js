@@ -1,6 +1,8 @@
 const request = require('request')
 
-const message = ({ temperature, precipProbability: rainProbability }) => `It is currently ${temperature}. There is a ${rainProbability}% chance of rain.`
+const message = ({ temperature, precipProbability: rainProbability }) => { 
+    `It is currently ${temperature}C and fells like ${apparentTemperature}C. There is a ${rainProbability}% chance of rain.`
+}
 
 const forecast = (latitude, longitude, callback) => {
     const url = `https://api.darksky.net/forecast/fc3e406b27b3d60d7df88acb68ad6214/${latitude},${longitude}?units=si`
